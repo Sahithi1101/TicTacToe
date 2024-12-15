@@ -1,6 +1,9 @@
+let headerText = document.getElementById(`.Title`)
 let cells = document.querySelectorAll(`.cell`)
-cells = Array.from(cells)
+const restartbtn =document.getElementById(`.restartbtn`)
 
+const player1 = "x"
+const player2 = "O"
 let currentPlayer = "X"
 
 let winnercomb = [
