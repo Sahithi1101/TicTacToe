@@ -10,3 +10,22 @@ let currentPlayer = player1
 let spaces = Array("","","","","","","","","")
 // console.log(spaces)
 
+const startGame = ()=> {
+    cells.forEach(cell => cell.addEventListener('click', cellClicked))
+}
+
+function cellClicked(cellclick) {
+    const id = cellclick.target.id
+   
+    if (!spaces[id]){
+        spaces[id] = currentPlayer
+        cellclick.target.innerText = currentPlayer
+
+        if (currentPlayer === player1) {
+            currentPlayer = player2; 
+         } else{
+            currentPlayer = player1
+         }
+    }
+}
+startGame();
