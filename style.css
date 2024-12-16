@@ -1,0 +1,46 @@
+.boxcontainer{
+    border:solid black;
+    height: 60vh;
+    width: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3,auto);
+    
+}
+.maincontainer{
+    border:solid black;
+    height: 20vh;
+    width:auto;
+}
+.titlecontainer{
+    /* border:solid red; */
+    height: 100%;
+    text-align-last: center;
+    /* margin: 1em; */
+}
+.cell{
+    border: solid green;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    width: 100px;
+    grid-template-columns: repeat(3,auto);
+    font-size: 50px;
+    cursor: pointer;
+}
+.footercontainer{
+    border:solid blue;
+    width:auto;
+    height:15vh;
+    align-content: center;
+    /* justify-content: space-around; */
+    text-align-last: center;
+}
+.restartbtn{
+    align-items: center;
+}
+:root{
+    --winningCells:green;
+}
