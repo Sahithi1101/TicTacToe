@@ -1,7 +1,8 @@
 let headerText = document.getElementById("Title");
 let cells = document.getElementsByClassName("cell");
 cells = Array.from(cells);
-const restartbtn = document.getElementById("restartbtn");
+const restartBtn = document.getElementById("restartbtn");
+let winText = document.getElementById("winmessage")
 // console.log(cells)
 
 const player1 = "x"
@@ -21,6 +22,10 @@ function cellClicked(cellclick) {
         spaces[id] = currentPlayer
         cellclick.target.innerText = currentPlayer
 
+        if(playerWon()){
+            winText = `${currentPlayer} has won`
+        }
+
         if (currentPlayer === player1) {
             currentPlayer = player2; 
          } else{
@@ -28,4 +33,15 @@ function cellClicked(cellclick) {
          }
     }
 }
+restartBtn.addEventListener('click', restart)
+
+function restart() {
+    spaces.fill(null)
+
+    cells.forEach( cell => {
+        cell.innerText = ''
+    })
+    currentPlayer = player1
+}
+
 startGame();
